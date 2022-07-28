@@ -11,6 +11,11 @@ function App() {
 <li>COMMISSION A DESIGNER</li>
 <li>SHOP PRODUCTS</li>
     </Nav>
+    <Banner>
+<PatternLeft>
+  Find ready made patterns in a wide range of styles and sizes, originally drafted by pattern makers from all over the world!
+</PatternLeft>
+    </Banner>
     </HomeWrapper>
   );
 }
@@ -49,4 +54,23 @@ li  {
   cursor: pointer;
  list-style-type: none;
 }
+`
+
+const Banner = styled.div`
+height: 500px;
+border: 3px solid green;
+margin-top: 5rem;
+`
+
+const PatternLeft = styled.div`
+width: 50%;
+height: 100%;
+padding-left: 2rem;
+display: flex;
+// justify-content: center;
+align-items: center;
+font-size: 45px;
+font-family: Comorant;
+border: 3px solid blue;
+text-align: center;
 `
