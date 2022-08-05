@@ -18,7 +18,7 @@ function App() {
 <li>COMMISSION A DESIGNER</li>
 <li>SHOP PRODUCTS</li>
     </Nav>
-    <Carousel autoPlay="true" infiniteLoop="true" interval="5000">
+    <Carousel style={carouselStyling} width="100%" autoPlay="true" infiniteLoop="true" interval="5000">
     <Banner>
 <PatternLeft>
   Find ready made patterns in a wide range of styles and sizes, originally drafted by pattern makers from all over the world!
@@ -27,11 +27,11 @@ function App() {
     </Banner>
 
     <Banner>
-      <PatternRight src={dressmaker}></PatternRight>
+    
 <PatternLeft>
   Hire skilled dressmakers to bring your fashion dreams to life!
 </PatternLeft>
-
+ <PatternRight src={dressmaker}></PatternRight>
     </Banner>
 
     <Banner>
@@ -52,6 +52,10 @@ export default App;
 
 const HomeWrapper = styled.div`
 margin: 1rem;
+padding: 0 5rem;
+display: flex;
+flex-direction: column;
+align-items: center;
 `
 
 const HomeTitle = styled.div`
@@ -66,8 +70,9 @@ letter-spacing: 10px;
 `
 
 const Nav = styled.div`
-border-top: 3px solid black;
-border-bottom: 3px solid black;
+border-top: 3px dashed red;
+border-bottom: 3px dashed orange;
+width: 600px;
 height: 70px;
 display: flex;
 justify-content: space-between;
@@ -86,41 +91,43 @@ li  {
 
 const Banner = styled.div`
 height: 500px;
-border: 3px solid green;
+// border: 3px solid green;
 margin-top: 5rem;
 display: flex;
 justify-content: space-around
 `
 
 const PatternLeft = styled.div`
-width: 50%;
+width: 100%;
 height: 100%;
-padding-left: 2rem;
+padding: 0.7rem;
 display: flex;
 // justify-content: center;
 align-items: center;
-font-size: 45px;
+font-size: 40px;
 font-family: Comorant;
-border: 3px solid blue;
+border-top: 3px dashed blue;
+border-bottom: 3px dashed blue;
+border-left: 3px dashed blue;
+margin-right: 1rem;
 text-align: center;
-`
-
-const PatternRight = styled.img`
-height: 100%;
-// border: 3px solid red;
 border-radius: 20px;
 `
 
+const PatternRight = styled.img`
+// height: 100%;
+// border: 3px solid red;
+border-radius: 20px;
+width: 400px;
+// border-top: 3px dashed red;
+// border-bottom: 3px dashed red;
+// border-left: 3px dashed red;
+`
 
 
-const sliderData = [
-  {image:"{pattern}",
-  description: "Find ready made patterns in a wide range of styles and sizes, originally drafted by pattern makers from all over the world!"
-},
-{image:"{dressmaker}",
-description: "Hire skilled dressmakers to bring your fashion dreams to life!"
-},
-{image:"{tools}",
-description: "Browse our catalogue of 200,000 products to meet your sewing needs."
-},
-]
+
+const carouselStyling = {
+ display: "flex",
+//  flexDirection: "row",
+alignItems: "center"
+}
