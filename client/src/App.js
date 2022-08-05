@@ -10,6 +10,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 function App() {
   return (
     <HomeWrapper>
+      <ButtonRow>
+      <Button>REGISTER</Button>
+      <Button>SIGN IN</Button>
+      </ButtonRow>
     <HomeTitle> 
       STITCH
     </HomeTitle>
@@ -64,6 +68,21 @@ display: flex;
 flex-direction: column;
 align-items: center;
 `
+const ButtonRow = styled.div`
+width: 90vw;
+display: flex;
+justify-content: flex-end;
+// border: 3px solid black
+`
+
+const Button = styled.button`
+border: 3px solid black;
+height: 30px;
+margin-left: 0.5rem;
+background-color: white;
+border-radius: 7px;
+`
+
 
 const HomeTitle = styled.div`
 // border: 4px solid red;
