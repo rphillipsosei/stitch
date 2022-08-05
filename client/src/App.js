@@ -18,7 +18,7 @@ function App() {
 <li>COMMISSION A DESIGNER</li>
 <li>SHOP PRODUCTS</li>
     </Nav>
-    <Carousel style={carouselStyling} width="100%" autoPlay="true" infiniteLoop="true" interval="5000">
+    <Carousel width="100%" autoPlay="true" infiniteLoop="true" interval="5000">
     <Banner>
 <PatternLeft>
   Find ready made patterns in a wide range of styles and sizes, originally drafted by pattern makers from all over the world!
@@ -41,6 +41,13 @@ function App() {
 <PatternRight src={tools}></PatternRight>
     </Banner>
     </Carousel>
+    <Header> 🔥 HOT PATTERNS 👗</Header>
+    <HotSection/>
+    <Header>HOT DESIGNERS 🔥💁</Header>
+    <HotSection/>
+    <Header>HOT PRODUCTS 🔥✂️</Header>
+    <HotSection/>
+    
     </HomeWrapper>
 
     
@@ -116,7 +123,7 @@ border-radius: 20px;
 
 const PatternRight = styled.img`
 // height: 100%;
-// border: 3px solid red;
+border: 3px solid red;
 border-radius: 20px;
 width: 400px;
 // border-top: 3px dashed red;
@@ -124,10 +131,11 @@ width: 400px;
 // border-left: 3px dashed red;
 `
 
+const Header = styled.h1`
+font-family: Comorant`
 
-
-const carouselStyling = {
- display: "flex",
-//  flexDirection: "row",
-alignItems: "center"
-}
+const HotSection = styled.div`
+width: 100%;
+border: 4px solid black;
+height: 300px;
+`
