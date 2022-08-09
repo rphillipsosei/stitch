@@ -16,27 +16,30 @@ function Home() {
         autoPlay="true"
         infiniteLoop="true"
         interval="5000"
+        showArrows="false"
+        showStatus="false"
+        showThumbs="false"
       >
         <Banner>
-          <PatternRight src={pattern}></PatternRight>
-          <PatternLeft>
-            Find ready made patterns in a wide range of styles and sizes,
+          <CarouselImg src={pattern}></CarouselImg>
+          <CarouselDesc>
+            find ready made patterns in a wide range of styles and sizes,
             originally drafted by pattern makers from all over the world!
-          </PatternLeft>
+          </CarouselDesc>
         </Banner>
 
         <Banner>
-          <PatternRight src={dressmaker}></PatternRight>
-          <PatternLeft>
-            Hire skilled dressmakers to bring your fashion dreams to life!
-          </PatternLeft>
+          <CarouselImg src={dressmaker}></CarouselImg>
+          <CarouselDesc>
+            hire skilled dressmakers to bring your fashion dreams to life!
+          </CarouselDesc>
         </Banner>
 
         <Banner>
-          <PatternRight src={tools}></PatternRight>
-          <PatternLeft>
-            Browse our catalogue of 200,000 products to meet your sewing needs.
-          </PatternLeft>
+          <CarouselImg src={tools}></CarouselImg>
+          <CarouselDesc>
+            browse our catalogue of 200,000 products to meet your sewing needs.
+          </CarouselDesc>
         </Banner>
       </Carousel>
       </TitleBanner>
@@ -78,6 +81,7 @@ flex-direction: column;
 
 const Banner = styled.div`
   height: 490px;
+  padding: 1rem;
   // border: 3px solid green;
   margin-top: 5rem;
   display: flex;
@@ -86,15 +90,15 @@ const Banner = styled.div`
   flex-direction: row;
 `;
 
-const PatternLeft = styled.div`
-  width: 100%;
+const CarouselDesc = styled.div`
+  width: 60%;
   // height: 100%;
   padding: 0.7rem;
   display: flex;
   // justify-content: center;
   align-items: center;
   font-size: 25px;
-  font-family: Caveat;
+  font-family: 'Baloo 2';
   // border-top: 3px dashed blue;
   // border-bottom: 3px dashed blue;
   // border-left: 3px dashed blue;
@@ -102,16 +106,18 @@ const PatternLeft = styled.div`
   text-align: center;
   border-radius: 20px;
   padding: 2rem;
+
+ border: 2px dashed white;
+  border-radius: 0px 40px 0px; 40px 
 `;
 
-const PatternRight = styled.img`
-  // height: 100%;
-  border: 3px solid red;
-  border-radius: 20px;
-  width: 400px;
-  // border-top: 3px dashed red;
-  // border-bottom: 3px dashed red;
-  // border-left: 3px dashed red;
+const CarouselImg = styled.img`
+
+  // border: 3px solid red;
+
+  outline-offset: 5px;
+outline: 2px dashed white;
+border-radius: 40px 0px 40px 0px;
 `;
 
 const Header = styled.h1`
