@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import pattern from "../assets/pattern-home.jpeg";
-import dressmaker from "../assets/dressmaker.webp";
+import pattern from "../assets/patterns-home.jpeg";
+import dressmaker from "../assets/dressmaker-home.jpg";
 import tools from "../assets/tools-home.jpeg";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -8,8 +8,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 function Home() {
   return (
     <HomeWrapper>
- 
-      <HomeTitle>stitch</HomeTitle>
+ <TitleBanner>
+    
 
       <Carousel
         width="100%"
@@ -18,27 +18,28 @@ function Home() {
         interval="5000"
       >
         <Banner>
+          <PatternRight src={pattern}></PatternRight>
           <PatternLeft>
             Find ready made patterns in a wide range of styles and sizes,
             originally drafted by pattern makers from all over the world!
           </PatternLeft>
-          <PatternRight src={pattern}></PatternRight>
         </Banner>
 
         <Banner>
+          <PatternRight src={dressmaker}></PatternRight>
           <PatternLeft>
             Hire skilled dressmakers to bring your fashion dreams to life!
           </PatternLeft>
-          <PatternRight src={dressmaker}></PatternRight>
         </Banner>
 
         <Banner>
+          <PatternRight src={tools}></PatternRight>
           <PatternLeft>
             Browse our catalogue of 200,000 products to meet your sewing needs.
           </PatternLeft>
-          <PatternRight src={tools}></PatternRight>
         </Banner>
       </Carousel>
+      </TitleBanner>
       <Header> 🔥 HOT PATTERNS 👗</Header>
       <HotSection />
       <Header>HOT DESIGNERS 🔥💁</Header>
@@ -61,45 +62,46 @@ const HomeWrapper = styled.div`
   align-items: center;
 `;
 
+const TitleBanner = styled.div`
+display: flex;
+width: 70%;
+height: 600px;
+// justify-content: center;
+// border: 3px solid blue;
+flex-direction: column;
+// align-items: center;
+// justify-content: center;
+`
 
-const HomeTitle = styled.div`
-  // border: 4px solid red;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Caveat;
-  font-size: 200px;
-  letter-spacing: 10px;
-  color: white;
-  transform: rotate(-10deg);
-`;
 
 
 
 const Banner = styled.div`
-  height: 500px;
+  height: 490px;
   // border: 3px solid green;
   margin-top: 5rem;
   display: flex;
-  justify-content: space-around;
+  // justify-content: space-around;
+  flex-direction: column;
+  flex-direction: row;
 `;
 
 const PatternLeft = styled.div`
   width: 100%;
-  height: 100%;
+  // height: 100%;
   padding: 0.7rem;
   display: flex;
   // justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 25px;
   font-family: Caveat;
-  border-top: 3px dashed blue;
-  border-bottom: 3px dashed blue;
-  border-left: 3px dashed blue;
+  // border-top: 3px dashed blue;
+  // border-bottom: 3px dashed blue;
+  // border-left: 3px dashed blue;
   margin-right: 1rem;
   text-align: center;
   border-radius: 20px;
+  padding: 2rem;
 `;
 
 const PatternRight = styled.img`

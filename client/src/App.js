@@ -9,20 +9,23 @@ import Error from "./Pages/Error.jsx";
 import Designers from "./Pages/Designers.jsx";
 import Products from "./Pages/Products.jsx";
 import Patterns from "./Pages/Patterns.jsx";
+import {FaShoppingCart} from 'react-icons/fa'
 
 function App() {
   return (
     <Router>
        <ButtonRow>
         <Button>REGISTER</Button>
+        
         <Button>SIGN IN</Button>
       </ButtonRow>
-      <Nav>
-      <Link to="/"  style={{textDecoration: 'none'}}>HOME</Link>
-        <Link to="/Patterns"  style={{textDecoration: 'none'}}>SHOP PATTERNS</Link>
-        <Link to="/Designers"  style={{textDecoration: 'none'}}>COMMISSION A DESIGNER</Link>
-        <Link to="/Products"  style={{textDecoration: 'none'}}>SHOP PRODUCTS</Link>
-      
+      <HomeTitle>stitch</HomeTitle>
+      <Nav align="right">
+      {/* <Link to="/"  style={{textDecoration: 'none'}}>HOME</Link> */}
+        <Link to="/Patterns"  style={{textDecoration: 'none', color: 'white'}}>shop patterns</Link>
+        <Link to="/Designers"  style={{textDecoration: 'none', color: 'white'}}>commission a designer</Link>
+        <Link to="/Products"  style={{textDecoration: 'none', color: 'white'}}>shop products</Link>
+        <Link to="#"  style={{textDecoration: 'none', color: 'white'}}><FaShoppingCart/> (6)</Link>
       </Nav>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -41,16 +44,31 @@ function App() {
 
 export default App;
 
+
+const HomeTitle = styled.div`
+  // border: 4px solid red;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Caveat;
+  font-size: 200px;
+  letter-spacing: 10px;
+  color: white;
+  transform: rotate(-10deg);
+`;
+
 const Nav = styled.div`
-  border-top: 3px dashed red;
-  border-bottom: 3px dashed orange;
-  // width: 600px;
+
+  // border-top: 3px dashed white;
+  border-bottom: 3px dashed white;
+  width: 93%;
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: Caveat;
-  font-size: 18px;
+  font-size: 30px;
   // letter-spacing: 10px;
   padding-left: 3rem;
   padding-right: 3rem;
@@ -73,9 +91,14 @@ const ButtonRow = styled.div`
 `;
 
 const Button = styled.button`
-  border: 3px solid black;
+  border: none;
   height: 30px;
-  margin-left: 0.5rem;
-  background-color: white;
+  // margin-left: 0.5rem;
   border-radius: 7px;
+  background-color: #FA785B;
+  font-family: Caveat;
+  width: 100px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 `;
