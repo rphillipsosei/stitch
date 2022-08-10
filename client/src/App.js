@@ -21,8 +21,10 @@ function App() {
         <Link to="/Designers"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>contact developer</Link>
         <Link to="/Products"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>shop products</Link>
         {/* <Link to="#"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}><FaShoppingCart/> (6)</Link> */}
-      </Links><HomeTitle>stitch</HomeTitle>
-     
+      </Links>
+      <Link to="/"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>
+      <HomeTitle>stitch</HomeTitle>
+     </Link>
        <ButtonRow>
         <Button>register</Button>
         
@@ -50,14 +52,12 @@ export default App;
 
 const HomeTitle = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
   font-family: Caveat;
-  font-size: 70px;
+  font-size: 100px;
   letter-spacing: 10px;
   color: white;
-  position: relative;
-  right: 5%
+  margin-left: -10rem;
 `;
 
 const Nav = styled.div`
