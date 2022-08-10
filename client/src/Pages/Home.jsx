@@ -1,41 +1,26 @@
 import styled from "styled-components";
-import pattern from "../assets/patterns-home.jpeg";
-import dressmaker from "../assets/dressmaker-home.jpg";
-import tools from "../assets/tools-home.jpeg";
+import pattern from "../assets/patterns-home.png";
+import dressmaker from "../assets/dressmaker-home.png";
+import tools from "../assets/tools-home.png";
 import {useRef} from 'react'
-import {Navigation, EffectFade} from 'swiper'
-import 'swiper/css/navigation'
-import 'swiper/css/effect-fade'
-import {Swiper, SwiperSlide} from 'swiper/react';
-import 'swiper/css';
+
+
 
 
 
 function Home() {
   return (
     <HomeWrapper>
-<Swiper
-modules={[Navigation, EffectFade]}
-navigation
-effect
-speed={800}
-slidesPerView={1}
-loop
-styles={MySwiper}
->
-  <SwiperSlide
-  styles={SwiperSlide}>
-    <img src={tools}/>
-  </SwiperSlide>
-  <SwiperSlide
-  styles={SwiperSlide}>
-    <img src={dressmaker}/>
-  </SwiperSlide>
-  <SwiperSlide
-  styles={SwiperSlide}>
-    <img src={pattern}/>
-  </SwiperSlide>
-  </Swiper>
+      <Banner>
+<BannerText>
+  a place where all of your sewing fantasies come to life! <br></br>  browse amongst hundreds of designers to create your vision, peruse our thousands of sewing-related products, and find sewing patterns that speak to your personal style!
+</BannerText>
+        <BannerImgs>
+<BannerImg src={dressmaker}/>
+<BannerImg src={tools}/>
+<BannerImg src={pattern}/>
+        </BannerImgs>
+</Banner>
       {/* <Header> 🔥 HOT PATTERNS 👗</Header>
       <HotSection />
       <Header>HOT DESIGNERS 🔥💁</Header>
@@ -45,6 +30,9 @@ styles={MySwiper}
       <Newsletter>
         Join our Newletter!
       </Newsletter> */}
+      <HomeBody>
+        hii
+      </HomeBody>
     </HomeWrapper>
   );
 }
@@ -52,64 +40,57 @@ styles={MySwiper}
 export default Home;
 
 const HomeWrapper = styled.div`
+width: 100%
+display: flex;
+flex-direction: column;
+align-items: center;
 
 `;
 
-const TitleBanner = styled.div`
+const Banner = styled.div` 
+// width: 90%;
+height: 700px;
+// border: 4px solid white;
 display: flex;
-width: 70%;
-height: 600px;
-// justify-content: center;
-// border: 3px solid blue;
 flex-direction: column;
-// align-items: center;
-// justify-content: center;
+align-items: center;
+margin-top: 6rem;
+text-align: center;
+padding-left: 5rem;
+padding-right: 5rem;
+`  
+
+
+
+
+const BannerText = styled.div`
+font-family: Baloo 2;
+font-size: 30px;
+display: flex;
+margin-top: 2rem;
+justify-content: center;
+wrap: wrap;
+
 `
 
+const BannerImgs = styled.div`
+width: 90%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+// border: 3px solid  black;
+`
+const BannerImg = styled.img`
+scale: 70%;
+// outline: 3px solid white;
+// border: 3px solid white;
+outline-offset: 15px;
+// border-style: double;
+`
 
+const HomeBody = styled.div`
+background-color: beige;
+width: 100%;
+height: 50vh;
+`
 
-
-const Banner = styled.div`
-  height: 490px;
-  padding: 1rem;
-  // border: 3px solid green;
-  margin-top: 5rem;
-  display: flex;
-  // justify-content: space-around;
-  flex-direction: column;
-  flex-direction: row;
-`;
-
-
-
-// const Header = styled.h1`
-//   font-family: Caveat;
-// `;
-
-// const HotSection = styled.div`
-//   width: 100%;
-//   border: 4px solid black;
-//   height: 300px;
-// `;
-
-// const Newsletter = styled.div`
-// margin-top: 5rem;
-// height: 250px;
-// width: 100%;
-// border-top: 3px solid black;
-// border-bottom: 3px solid black;
-// padding-top: 1rem;
-// font-family: Caveat;
-// font-size: 25px;
-// display: flex;
-// justify-content: center;
-// `;
-
-
-const MySwiper = {
-
-}
-
-const SwiperSlide = {
-
-}

@@ -61,6 +61,7 @@ const HomeTitle = styled.div`
 `;
 
 const Nav = styled.div`
+padding: 0 5rem;
 margin-top: 2rem;
   // border-bottom: 3px solid white;
   height: 70px;
