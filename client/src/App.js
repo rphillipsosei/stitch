@@ -10,6 +10,7 @@ import Designers from "./Pages/Designers.jsx";
 import Products from "./Pages/Products.jsx";
 import Patterns from "./Pages/Patterns.jsx";
 import {FaShoppingCart} from 'react-icons/fa'
+import StitchLogo from './assets/stitch-logo.png'
 
 function App() {
   return (
@@ -19,11 +20,11 @@ function App() {
       {/* <Link to="/"  style={{textDecoration: 'none'}}>HOME</Link> */}
         <Link to="/Patterns"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>about</Link>
         <Link to="/Designers"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>contact developer</Link>
-        <Link to="/Products"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>shop products</Link>
+        <Link to="/Products"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>faq</Link>
         {/* <Link to="#"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}><FaShoppingCart/> (6)</Link> */}
       </Links>
       <Link to="/"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>
-      <HomeTitle>stitch</HomeTitle>
+      <Logo src={StitchLogo}/>
      </Link>
        <ButtonRow>
         <Button>register</Button>
@@ -50,19 +51,11 @@ function App() {
 export default App;
 
 
-const HomeTitle = styled.div`
-  display: flex;
-  align-items: center;
-  font-family: Caveat;
-  font-size: 100px;
-  letter-spacing: 10px;
-  color: white;
-  margin-left: -10rem;
-`;
+
 
 const Nav = styled.div`
 padding: 0 5rem;
-margin-top: 2rem;
+margin-top: 3rem;
   // border-bottom: 3px solid white;
   height: 70px;
   display: flex;
@@ -71,12 +64,17 @@ margin-top: 2rem;
   font-family: 'Baloo 2';
   font-size: 16px;
 
- 
+
   li {
     cursor: pointer;
     list-style-type: none;
   }
 `;
+
+const Logo = styled.img`
+scale: 70%;
+margin-left: -12rem;
+ `
 
  const Links = styled.div`
   width: 25%;
