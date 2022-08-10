@@ -17,8 +17,8 @@ function App() {
         <Nav align="right">
 <Links>
       {/* <Link to="/"  style={{textDecoration: 'none'}}>HOME</Link> */}
-        <Link to="/Patterns"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>shop patterns</Link>
-        <Link to="/Designers"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>commission a designer</Link>
+        <Link to="/Patterns"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>about</Link>
+        <Link to="/Designers"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>contact developer</Link>
         <Link to="/Products"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>shop products</Link>
         {/* <Link to="#"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}><FaShoppingCart/> (6)</Link> */}
       </Links><HomeTitle>stitch</HomeTitle>
@@ -104,4 +104,6 @@ const Button = styled.button`
   color: white;
   font-size: 18px;
   cursor: pointer;
+  background-image: url("https://www.transparenttextures.com/patterns/grey-jean.png");
+
 `;

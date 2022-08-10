@@ -8,7 +8,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #FA785B;
   color: white;
-  /* display: flex; */
+  background-image: url("https://www.transparenttextures.com/patterns/grey-jean.png");
+
 
 }
 
