@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import styled from "styled-components";
-import pattern from "../assets/patterns-home.png";
-import dressmaker from "../assets/dressmaker-home.png";
-import dressmakerOverlay from "../assets/dressmaker-overlay.png";
-import tools from "../assets/tools-home.png";
+import patterns from "../assets/patterns.webp";
+import dressmaker from "../assets/dressmaker.webp";
+import products from "../assets/products.webp";
+import dressmakerOverlay from "../assets/dressmaker-overlay.jpg";
+import patternsOverlay from "../assets/patterns-overlay.jpg";
+import productsOverlay from "../assets/products-overlay.jpg";
 import { Link } from "react-router-dom";
 import Designers from "../Pages/Designers.jsx";
 import Products from "../Pages/Products.jsx";
@@ -26,24 +28,32 @@ function Home() {
     <HomeWrapper>
       <Banner>
         <BannerText>
-        <i>Where all of your sewing fantasies come to life! </i>
+        <i>...where all of your sewing fantasies come to life! </i>
+       <p>get started:</p>
         </BannerText> 
         <BannerImgs>
+
+ <Link to="/Patterns"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>
+          <ImgContainer onMouseEnter={handleMouseOver} onMouseLeave={handleMouseLeave}>
+            {mouseOver? <BannerImg src={patternsOverlay}/> : <BannerImg src={patterns}/>}
+        
+          </ImgContainer></Link>
+
         <Link to="/Designers"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>
           <ImgContainer onMouseEnter={handleMouseOver} onMouseLeave={handleMouseLeave}>
             {mouseOver? <BannerImg src={dressmakerOverlay}/> : <BannerImg src={dressmaker}/>}
-            commission a designer
+     
           </ImgContainer></Link>
+
+
           <Link to="/Products"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>
-          <ImgContainer>
-            <BannerImg src={tools} />
-            shop products
+          <ImgContainer onMouseEnter={handleMouseOver} onMouseLeave={handleMouseLeave}>
+            {mouseOver? <BannerImg src={productsOverlay}/> : <BannerImg src={[products]}/>}
+   
           </ImgContainer></Link>
-          <Link to="/Patterns"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>
-          <ImgContainer>
-            <BannerImg src={pattern} />
-            shop patterns
-          </ImgContainer></Link>
+
+          
+         
         </BannerImgs>
       </Banner>
       {/* <Header> 🔥 HOT PATTERNS 👗</Header>
@@ -77,7 +87,7 @@ const Banner = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 6rem;
   text-align: center;
   padding: 0 5rem;
 `;
@@ -87,9 +97,17 @@ const BannerText = styled.div`
   font-size: 40px;
   display: flex;
   margin: 0rem 5rem;
-  margin-bottom: 5rem;
+  // margin-bottom: 5rem;
   justify-content: center;
   // border: 3px solid black;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    font-family: 'Baloo 2';
+    font-size: 20px;
+    margin-top: 3rem;
+  }
 `;
 
 const BannerImgs = styled.div`
@@ -98,13 +116,13 @@ const BannerImgs = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 3px solid black;
+  // border: 3px solid black;
   
 `;
 
 const ImgContainer = styled.div`
-  border: 3px solid white;
-  height: 100%;
+  // border: 3px solid white;
+  // height: 100%;
   width: 400px;
   margin-right: 1rem;
   display: flex;
@@ -112,10 +130,13 @@ const ImgContainer = styled.div`
   flex-direction: column;
   font-size: 20px;
   align-items: center;
+  border-radius: 180px;
 `;
 
+
+
 const BannerImg = styled.img`
-  border: 3px solid red;
+  // border: 3px solid red;
   border-radius: 180px;
   max-height: 350px;
   max-width: 350px;
@@ -130,19 +151,3 @@ const HomeBody = styled.div`
 `;
 
 
-const Button = styled.button`
-  border: 1px solid white;
-  height: 40px;
-  border-radius: 7px;
-  background-color: #FA785B;
-  font-family: Baloo 2;
-  width: 160px;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-  margin-bottom: 2rem;
-  background-image: url("https://www.transparenttextures.com/patterns/grey-jean.png");
-  margin-left: 1rem;
-  margin-top: 0.7rem;
-  margin-bottom: 5rem;
-`;
