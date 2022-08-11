@@ -18,9 +18,9 @@ function App() {
         <Nav align="right">
 <Links>
       {/* <Link to="/"  style={{textDecoration: 'none'}}>HOME</Link> */}
-        <Link to="/Patterns"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>about</Link>
-        <Link to="/Designers"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>contact developer</Link>
-        <Link to="/Products"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>faq</Link>
+        <Link to="/#"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>about</Link>
+        <Link to="/#"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>contact developer</Link>
+        <Link to="/#"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>faqs</Link>
         {/* <Link to="#"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}><FaShoppingCart/> (6)</Link> */}
       </Links>
       <Link to="/"  style={{cursor: 'pointer', textDecoration: 'none', color: 'white'}}>
