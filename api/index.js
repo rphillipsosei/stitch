@@ -2,11 +2,22 @@ const express = require('express')
 const app = express();
 PORT = 5000;
 const mongoose = require('mongoose');
+const dotenv = require("dotenv")
 
-mongoose.connection("mongodb+srv://rphillipsosei:@cluster0.8fkshea.mongodb.net/stitch?retryWrites=true&w=majority")
-.then(()=> console.log("DB Connection Successful!"))
-.catch((err)=> console.log(err));
+dotenv.config();
+
+mongoose
+.connect(process.env.MONGO_URL)
+.then(()=> 
+    console.log("DB Connection Successful!"))
+.catch((err)=> {
+    console.log(err)
+});
+
+app.get("/api/test", ()=> {
+    console.log("Test is successful")
+})
 
 app.listen(5000, ()=> {
-    console.log('Server is listening on port ${PORT}')
+    console.log(`Server is listening on port ${PORT}`)
 })
