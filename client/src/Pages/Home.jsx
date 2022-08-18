@@ -29,7 +29,7 @@ function Home() {
       <Banner>
         <BannerText>
         <i>...where all of your sewing fantasies come to life! </i>
-       <p>get started:</p>
+ 
         </BannerText> 
         <BannerImgs>
 
@@ -56,7 +56,9 @@ function Home() {
          
         </BannerImgs>
       </Banner>
-      {/* <Header> 🔥 HOT PATTERNS 👗</Header>
+   
+      <HomeBody>
+   <Header> 🔥 HOT PATTERNS 👗</Header>
       <HotSection />
       <Header>HOT DESIGNERS 🔥💁</Header>
       <HotSection />
@@ -64,8 +66,9 @@ function Home() {
       <HotSection />
       <Newsletter>
         Join our Newletter!
-      </Newsletter> */}
-      <HomeBody>hii</HomeBody>
+      </Newsletter>
+
+      </HomeBody>
     </HomeWrapper>
   );
 }
@@ -82,7 +85,7 @@ display: flex;
 
 const Banner = styled.div`
   // width: 90%;
-  height: 600px;
+  height: 700px;
   // border: 4px solid white;
   display: flex;
   flex-direction: column;
@@ -102,12 +105,12 @@ const BannerText = styled.div`
   // border: 3px solid black;
   align-items: center;
   flex-direction: column;
+    margin-bottom: 7rem;
+  // p {
+  //   font-family: 'Baloo 2';
+  //   font-size: 20px;
 
-  p {
-    font-family: 'Baloo 2';
-    font-size: 20px;
-    margin-top: 3rem;
-  }
+  // }
 `;
 
 const BannerImgs = styled.div`
@@ -136,18 +139,41 @@ const ImgContainer = styled.div`
 
 
 const BannerImg = styled.img`
-  // border: 3px solid red;
+  border: 3px solid white;
   border-radius: 180px;
   max-height: 350px;
   max-width: 350px;
   margin-bottom: 1rem;
+  outline: 3px solid white;
+  outline-offset: 20px;
 `;
 
 const HomeBody = styled.div`
   background-color: beige;
   width: 99.1vw;
-  height: 50vh;
+  // height: 50vh;
   margin-left: -0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6rem;
 `;
 
 
+const HotSection = styled.div`
+border: 3px solid black;
+height: 400px;
+width: 90%;
+margin-bottom: 4rem;
+`
+const Header = styled.div`
+color: black;
+font-family: 'Baloo 2';
+font-size: 25px;
+
+`
+
+const Newsletter = styled.div`
+color: black;
+font-family: 'Baloo 2';
+`
