@@ -9,7 +9,6 @@ import Error from "./Pages/Error.jsx";
 import Designers from "./Pages/Designers.jsx";
 import Products from "./Pages/Products.jsx";
 import Patterns from "./Pages/Patterns.jsx";
-import {FaShoppingCart} from 'react-icons/fa'
 import StitchLogo from './assets/stitch-logo.png'
 
 function App() {
